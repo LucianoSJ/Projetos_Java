@@ -1,0 +1,50 @@
+package entities;
+
+import java.util.Date;
+
+import entities.enums.OrderStatus;
+
+public class Venda {
+
+	private Integer id;
+	private Date datat;
+	private OrderStatus status;
+	
+	public Venda() {
+	}
+
+	public Venda(Integer id, Date moment, OrderStatus status) {
+		this.id = id;
+		this.datat = moment;
+		this.status = status;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Date getMoment() {
+		return datat;
+	}
+
+	public void setMoment(Date moment) {
+		this.datat = moment;
+	}
+
+	public OrderStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(OrderStatus status) {
+		this.status = status;
+	}
+
+	@Override
+	public String toString() {
+		return "Venda:" + id + ", Data:" + datat + ", Status:" + status;
+	}
+}
